@@ -1,9 +1,14 @@
 {
-  "name": "insight-api",
-  "description": "A Bitcoin blockchain REST and web socket API service for Bitcore Node.",
-  "version": "0.4.3",
-  "repository": "git://github.com/bitpay/insight-api.git",
+  "name": "insight-api-crown",
+  "description": "A Crown blockchain REST and web socket API service for Bitcore Node.",
+  "author": "Crown Developers <info@crown.tech>",
+  "version": "0.0.0",
+  "repository": "git://github.com/Crowndev/insight-api-crown.git",
   "contributors": [
+    {
+      "name": "BitPay",
+      "email": "dev@bitpay.com"
+    },
     {
       "name": "Gustavo Cortez",
       "email": "cmgustavo83@gmail.com"
@@ -38,15 +43,15 @@
     }
   ],
   "bugs": {
-    "url": "https://github.com/bitpay/insight-api/issues"
+    "url": "https://github.com/Crowndev/insight-api-crown/issues"
   },
-  "homepage": "https://github.com/bitpay/insight-api",
+  "homepage": "https://github.com/Crowndev/insight-api-crown",
   "license": "MIT",
   "keywords": [
     "insight",
     "insight api",
     "blockchain",
-    "bitcoin api",
+    "crown api",
     "blockchain api",
     "json",
     "bitcore"
