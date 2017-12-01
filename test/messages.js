@@ -11,7 +11,7 @@ describe('Messages', function() {
   var privateKey = bitcore.PrivateKey.fromWIF('cQwApHAg8hw9AZuxiU4a7g9kFWdaemhPxVZXWiAKgJTx6dPP32fN');
   var address = 'mswTKCE2tYSFvUNnNPBKZfeNmugYL1rZMx';
   var badAddress = 'mswTKCE2tYSFvUNnNPBKZfeNmuhYL1rZMm';
-  var signature = 'IA4sIwhcLMPPsYtB8tN0PI+aQuwDyl+/4Ksa89llNSAeVaRdMyyIxpo1H5N3GHbPl9LQqZ7CvaokeQgsOkK9fn4=';
+  var signature = 'HzbvNbQGWxPNl6sHLQAULOEFzFG1YDZ/yy3H5dpOHMu+SG2u3N1usSoI3+2KXaY2VJPPLyov4Iq3Ec7H39VBsT8=';
   var message = 'cellar door';
 
   it('will verify a message (true)', function(done) {
