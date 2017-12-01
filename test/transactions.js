@@ -975,7 +975,7 @@ describe('Transactions', function() {
         'valueOut': 0.02038504,
         'vout': [
           {
-            '3DQYCLG6rZdtV2Xw8y4YtozZjNHYoKsLuo': 45000
+            'CUBQqq7jBiJ3Hzjvhcit3hFfCyDFDCBbuX': 45000
           },
           {
             '12WvZmssxT85f81dD6wcmWznxbnFkEpNMS': 1993504
