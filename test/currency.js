@@ -7,25 +7,32 @@ var CurrencyController = require('../lib/currency');
 
 describe('Currency', function() {
 
-  var bitstampData = {
-    high: 239.44,
-    last: 237.90,
-    timestamp: 1443798711,
-    bid: 237.61,
-    vwap: 237.88,
-    volume: 21463.27736401,
-    low: 235.00,
-    ask: 237.90
-  };
+  var crownData = [{
+    "id": "crown",
+    "name": "Crown",
+    "symbol": "CRW",
+    "rank": "187",
+    "price_usd": "1.45351",
+    "price_btc": "0.00013096",
+    "24h_volume_usd": "76762.4",
+    "market_cap_usd": "23613646.0",
+    "available_supply": "16245947.0",
+    "total_supply": "16245947.0",
+    "max_supply": null,
+    "percent_change_1h": "-2.1",
+    "percent_change_24h": "11.11",
+    "percent_change_7d": "-12.79",
+    "last_updated": "1512213259"
+  }];
 
-  it.skip('will make live request to bitstamp', function(done) {
+  it.skip('will make live request to coinmarketcap', function(done) {
     var currency = new CurrencyController({});
     var req = {};
     var res = {
       jsonp: function(response) {
         response.status.should.equal(200);
-        should.exist(response.data.bitstamp);
-        (typeof response.data.bitstamp).should.equal('number');
+        should.exist(response.data.crw_usd);
+        (typeof response.data.crw_usd).should.equal('number');
         done();
       }
     };
@@ -34,7 +41,7 @@ describe('Currency', function() {
 
   it('will retrieve a fresh value', function(done) {
     var TestCurrencyController = proxyquire('../lib/currency', {
-      request: sinon.stub().callsArgWith(1, null, {statusCode: 200}, JSON.stringify(bitstampData))
+      request: sinon.stub().callsArgWith(1, null, {statusCode: 200}, JSON.stringify(crownData))
     });
     var node = {
       log: {
@@ -42,14 +49,18 @@ describe('Currency', function() {
       }
     };
     var currency = new TestCurrencyController({node: node});
-    currency.bitstampRate = 220.20;
+    currency.exchangeRates = {
+      crw_usd: 1.45351,
+      btc_usd: 11098.89,
+      crw_btc: 0.00013096
+    };
     currency.timestamp = Date.now() - 61000 * CurrencyController.DEFAULT_CURRENCY_DELAY;
     var req = {};
     var res = {
       jsonp: function(response) {
         response.status.should.equal(200);
-        should.exist(response.data.bitstamp);
-        response.data.bitstamp.should.equal(237.90);
+        should.exist(response.data.crw_usd);
+        response.data.crw_usd.should.equal(1.45351);
         done();
       }
     };
@@ -66,14 +77,18 @@ describe('Currency', function() {
       }
     };
     var currency = new TestCurrencyController({node: node});
-    currency.bitstampRate = 237.90;
+    currency.exchangeRates = {
+      crw_usd: 1.45351,
+      btc_usd: 11098.89,
+      crw_btc: 0.00013096
+    };
     currency.timestamp = Date.now() - 65000 * CurrencyController.DEFAULT_CURRENCY_DELAY;
     var req = {};
     var res = {
       jsonp: function(response) {
         response.status.should.equal(200);
-        should.exist(response.data.bitstamp);
-        response.data.bitstamp.should.equal(237.90);
+        should.exist(response.data.crw_usd);
+        response.data.crw_usd.should.equal(1.45351);
         node.log.error.callCount.should.equal(1);
         done();
       }
@@ -92,14 +107,18 @@ describe('Currency', function() {
       }
     };
     var currency = new TestCurrencyController({node: node});
-    currency.bitstampRate = 237.90;
+    currency.exchangeRates = {
+      crw_usd: 1.45351,
+      btc_usd: 11098.89,
+      crw_btc: 0.00013096
+    };
     currency.timestamp = Date.now();
     var req = {};
     var res = {
       jsonp: function(response) {
         response.status.should.equal(200);
-        should.exist(response.data.bitstamp);
-        response.data.bitstamp.should.equal(237.90);
+        should.exist(response.data.crw_usd);
+        response.data.crw_usd.should.equal(1.45351);
         request.callCount.should.equal(0);
         done();
       }
