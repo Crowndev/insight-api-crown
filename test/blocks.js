@@ -9,21 +9,21 @@ var _ = require('lodash');
 var blocks = require('./data/blocks.json');
 
 var blockIndexes = {
-  'efb9de002fe2db74b684c026c6683dc23f2c30966b29643d0b33ff9bfa07f549': {
-    hash: 'efb9de002fe2db74b684c026c6683dc23f2c30966b29643d0b33ff9bfa07f549',
-    chainWork: '000000000000000000000000000000000000000000078b3bf74f170312ee37df',
-    prevHash: 'd06d56edef9721d66117c8e104c1bf20bb21c64c0abfabe059f72d6e93902bad',
-    nextHash: '5afa810c091625014a9ca38c944f0572ea581afc708f24f424667a5fa3957b6c',
-    confirmations: 51753,
-    height: 1643936
+  '9985318b821f41d9dc3825ff0b3d1505b37dc446742d57cebdb2c26ba6d82911': {
+    hash: '9985318b821f41d9dc3825ff0b3d1505b37dc446742d57cebdb2c26ba6d82911',
+    chainWork: '0000000000000000000000000000000000000000000799bb6460bb078b118e46',
+    prevHash: '93bda3677c80a6a2e57e8358e3ed99a566cd38a7dd3dc16bcada2714a4b67ba4',
+    nextHash: '41fbeae9be3b9ec92cabf9daa4b488f2476defb08cdf76b2fc9fca5c363677c1',
+    confirmations: 119,
+    height: 1644912
   },
-  'd06d56edef9721d66117c8e104c1bf20bb21c64c0abfabe059f72d6e93902bad': {
-    hash: 'd06d56edef9721d66117c8e104c1bf20bb21c64c0abfabe059f72d6e93902bad',
-    chainWork: '000000000000000000000000000000000000000000078b376912d5f0c9155ffd',
-    prevHash: '92fb03c59dcdf318919eccbf907d7d1b3d73504e5de91047c3763209ea2cf797',
-    nextHash: 'efb9de002fe2db74b684c026c6683dc23f2c30966b29643d0b33ff9bfa07f549',
-    confirmations: 51754,
-    height: 1643935
+  '93bda3677c80a6a2e57e8358e3ed99a566cd38a7dd3dc16bcada2714a4b67ba4': {
+    hash: '93bda3677c80a6a2e57e8358e3ed99a566cd38a7dd3dc16bcada2714a4b67ba4',
+    chainWork: '0000000000000000000000000000000000000000000799b768f2fba39fe525e1',
+    prevHash: '956eeaf1ef1890fc0d95026670d58d7ab109e05956f7a6dce5b021b0adb5320e',
+    nextHash: '9985318b821f41d9dc3825ff0b3d1505b37dc446742d57cebdb2c26ba6d82911',
+    confirmations: 120,
+    height: 1644911
   },
   '72a79139b132951724255181232988eeabc19e9b855a87727a3d8d59b369e2f7': {
     hash: '72a79139b132951724255181232988eeabc19e9b855a87727a3d8d59b369e2f7',
@@ -41,13 +41,13 @@ var blockIndexes = {
     confirmations: 1525616,
     height: 170073
   },
-  1643936: {
-    hash: 'efb9de002fe2db74b684c026c6683dc23f2c30966b29643d0b33ff9bfa07f549',
-    chainWork: '000000000000000000000000000000000000000000078b3bf74f170312ee37df',
-    prevHash: 'd06d56edef9721d66117c8e104c1bf20bb21c64c0abfabe059f72d6e93902bad',
-    nextHash: '5afa810c091625014a9ca38c944f0572ea581afc708f24f424667a5fa3957b6c',
-    confirmations: 51753,
-    height: 1643936
+  1644912: {
+    hash: '9985318b821f41d9dc3825ff0b3d1505b37dc446742d57cebdb2c26ba6d82911',
+    chainWork: '0000000000000000000000000000000000000000000799bb6460bb078b118e46',
+    prevHash: '93bda3677c80a6a2e57e8358e3ed99a566cd38a7dd3dc16bcada2714a4b67ba4',
+    nextHash: '41fbeae9be3b9ec92cabf9daa4b488f2476defb08cdf76b2fc9fca5c363677c1',
+    confirmations: 119,
+    height: 1644912
   },
   1671882: {
     hash: '72a79139b132951724255181232988eeabc19e9b855a87727a3d8d59b369e2f7',
@@ -129,7 +129,7 @@ describe('Blocks', function() {
         bitcoind: {
           getBlockHeader: sinon.stub().callsArgWith(1, null, blockIndexes['72a79139b132951724255181232988eeabc19e9b855a87727a3d8d59b369e2f7']),
           isMainChain: sinon.stub().returns(true),
-          height: 1695688
+          height: 1645030
         }
       }
     };
@@ -161,7 +161,7 @@ describe('Blocks', function() {
           bitcoind: {
             getBlockHeader: sinon.stub().callsArgWith(1, null, blockIndexes['72a79139b132951724255181232988eeabc19e9b855a87727a3d8d59b369e2f7']),
             isMainChain: sinon.stub().returns(true),
-            height: 1695688
+            height: 1645030
           }
         }
       };
@@ -192,10 +192,10 @@ describe('Blocks', function() {
     var insight = {
       'blocks': [
         {
-          'height': 1643936,
-          'size': 1187,
-          'hash': 'efb9de002fe2db74b684c026c6683dc23f2c30966b29643d0b33ff9bfa07f549',
-          'time': 1511679304,
+          'height': 1644912,
+          'size': 1048,
+          'hash': '9985318b821f41d9dc3825ff0b3d1505b37dc446742d57cebdb2c26ba6d82911',
+          'time': 1511740764,
           'txlength': 1,
           'poolInfo': {
             'poolName': 'BTC.TOP',
@@ -203,10 +203,10 @@ describe('Blocks', function() {
           }
         },
         {
-          'height': 1643935,
-          'size': 1187,
-          'hash': 'd06d56edef9721d66117c8e104c1bf20bb21c64c0abfabe059f72d6e93902bad',
-          'time': 1511679263,
+          'height': 1644911,
+          'size': 1048,
+          'hash': '93bda3677c80a6a2e57e8358e3ed99a566cd38a7dd3dc16bcada2714a4b67ba4',
+          'time': 1511740698,
           'txlength': 1,
           'poolInfo': {
             'poolName': 'BTC.TOP',
@@ -226,12 +226,12 @@ describe('Blocks', function() {
     };
 
     var stub = sinon.stub();
-    stub.onFirstCall().callsArgWith(1, null, new Buffer(blocks['efb9de002fe2db74b684c026c6683dc23f2c30966b29643d0b33ff9bfa07f549'], 'hex'));
-    stub.onSecondCall().callsArgWith(1, null, new Buffer(blocks['d06d56edef9721d66117c8e104c1bf20bb21c64c0abfabe059f72d6e93902bad'], 'hex'));
+    stub.onFirstCall().callsArgWith(1, null, new Buffer(blocks['9985318b821f41d9dc3825ff0b3d1505b37dc446742d57cebdb2c26ba6d82911'], 'hex'));
+    stub.onSecondCall().callsArgWith(1, null, new Buffer(blocks['93bda3677c80a6a2e57e8358e3ed99a566cd38a7dd3dc16bcada2714a4b67ba4'], 'hex'));
 
     var hashes = [
-      'd06d56edef9721d66117c8e104c1bf20bb21c64c0abfabe059f72d6e93902bad',
-      'efb9de002fe2db74b684c026c6683dc23f2c30966b29643d0b33ff9bfa07f549'
+      '93bda3677c80a6a2e57e8358e3ed99a566cd38a7dd3dc16bcada2714a4b67ba4',
+      '9985318b821f41d9dc3825ff0b3d1505b37dc446742d57cebdb2c26ba6d82911'
     ];
     var node = {
       log: sinon.stub(),
