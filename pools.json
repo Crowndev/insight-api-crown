@@ -238,5 +238,12 @@
     "searchStrings":[
       "/BTCC/"
     ]
+  },
+  {
+    "poolName":"BTC.TOP",
+    "url":"http://btc.top/",
+    "searchStrings":[
+      "/BTC.TOP/"
+    ]
   }
 ]
