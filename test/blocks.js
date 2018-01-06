@@ -117,7 +117,10 @@ describe('Blocks', function() {
       'nextblockhash': '21a080957e376ca82aed06b0037d8df2dcf0a6b050e5c405d5cb21851c3d8728',
       'reward': 9,
       'isMainChain': true,
-      'poolInfo': {}
+      'poolInfo': {
+        poolName: 'BTC.TOP',
+        url: 'http://btc.top/'
+      }
     };
 
     var bitcoreBlock = bitcore.Block.fromBuffer(new Buffer(blocks['72a79139b132951724255181232988eeabc19e9b855a87727a3d8d59b369e2f7'], 'hex'));

@@ -984,6 +984,7 @@ describe('Transactions', function() {
     it('should give the correct data', function() {
       var insight = {
         'txid': 'a15a7c257af596704390d345ff3ea2eed4cd02ce8bfb8afb700bff82257e49fb',
+        'txlock': false,
         'valueOut': 0.02038504,
         'vout': [
           {
@@ -1011,6 +1012,7 @@ describe('Transactions', function() {
     it('will not include null values in vout array', function() {
       var insight = {
         'txid': '716d54157c31e52c820494c6c2b8af1b64352049f4dcc80632aa15742a7f82c4',
+        'txlock': false,
         'valueOut': 12.5002,
         'vout': [
           {
