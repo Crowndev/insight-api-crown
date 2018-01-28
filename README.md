@@ -1,7 +1,7 @@
 insight-api-crown
 =================
 
-# This package is under development. Please don't install.
+This package is under development. It may be unstable, or not work as expected.
 
 Contributing
 ============
