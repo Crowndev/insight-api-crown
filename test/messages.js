@@ -9,8 +9,8 @@ var _ = require('lodash');
 describe('Messages', function() {
 
   var privateKey = bitcore.PrivateKey.fromWIF('cQwApHAg8hw9AZuxiU4a7g9kFWdaemhPxVZXWiAKgJTx6dPP32fN');
-  var address = 'mswTKCE2tYSFvUNnNPBKZfeNmugYL1rZMx';
-  var badAddress = 'mswTKCE2tYSFvUNnNPBKZfeNmuhYL1rZMm';
+  var address = 'tCRWRQt8kUAEyLanL7YACsSz91djtuDjtjQL3';
+  var badAddress = 'tCRWRQt8kUAEyLanL7YACsSz91djtuDjtjQL4';
   var signature = 'HzbvNbQGWxPNl6sHLQAULOEFzFG1YDZ/yy3H5dpOHMu+SG2u3N1usSoI3+2KXaY2VJPPLyov4Iq3Ec7H39VBsT8=';
   var message = 'cellar door';
 
