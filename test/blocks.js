@@ -322,11 +322,11 @@ describe('Blocks', function() {
     });
 
     it('should give a correct reward for block 3730110', function() {
-      blocks.getBlockReward(3730110).should.equal(4.5 * 1e8);
+      blocks.getBlockReward(3730110).should.equal(3.75 * 1e8);
     });
 
     it('should give a correct reward for block 5000000', function() {
-      blocks.getBlockReward(5000000).should.equal(2.25 * 1e8);
+      blocks.getBlockReward(5000000).should.equal(1.875 * 1e8);
     });
   });
 });
