@@ -2,7 +2,7 @@
   "name": "insight-api-crown",
   "description": "A Crown blockchain REST and web socket API service for Bitcore Node.",
   "author": "Crown Developers <info@crown.tech>",
-  "version": "0.4.8",
+  "version": "0.4.9",
   "publishConfig": {
     "tag": "next"
   },
